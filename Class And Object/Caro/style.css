@@ -1,0 +1,59 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+h1 {
+  display: inline-block;
+  width: 50%;
+}
+
+p {
+  display: block;
+  width: 100%;
+  color: red;
+}
+
+table {
+  border: 0px solid black;
+  display: inline-block;
+
+}
+
+td {
+  border: 0px solid black;
+  width: 25px;
+  height: 25px;
+}
+
+td input {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input#reset {
+  display: inline-block;
+  border: none;
+  background-color: rgb(224, 0, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input#reset:hover {
+  background-color: rgb(143, 0, 0);
+}

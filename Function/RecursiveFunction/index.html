@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: Kiểm tra từ đối xứng</title>
+</head>
+
+<body>
+    <h1>Kiểm tra từ đối xứng</h1>
+    <button id="checkLetter">Start</button>
+
+    <script>
+        let checkLetter = document.getElementById('checkLetter');
+ 
+
+        checkLetter.addEventListener('click', function () {
+            let letter = '';
+            do 
+            {
+                letter = prompt("Enter letter: ")
+            } 
+            while (letter.length <= 1)
+            let display = true;
+            isPalindrome(letter);
+            if (display)
+            {
+                document.write(letter + " is Palindrome");
+            } else {
+                document.write(letter + " is Not Palindrome");
+            }
+
+            function isPalindrome(abc) {
+                if (abc.length > 1) {
+                    if (abc[0] == abc[abc.length - 1]) {
+                        abc = [...abc];
+                        abc.pop();
+                        abc.shift();
+                        abc = abc.join('');
+                        isPalindrome(abc);
+                    } 
+                    else return display = false;
+                 
+                } 
+                else {
+                    return display = true;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

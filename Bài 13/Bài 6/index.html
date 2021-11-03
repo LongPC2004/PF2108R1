@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+
+<body>
+    <script>
+        let total = 0;
+        let count = 0;
+        N = 1;
+        while (count < 30) {
+
+            if (isDividedBySeven(N)) {
+                total += N;
+                count++;
+            }
+            N++;
+        }
+        document.write(total);
+        function isDividedBySeven(number) {
+            return number % 7 == 0;
+        }
+
+    </script>
+
+</body>
+
+</html>

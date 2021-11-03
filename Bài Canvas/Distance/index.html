@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+
+<body>
+    <canvas id="game" width="800" height="600" style="border: 3px solid #000000"></canvas>
+    <script>
+        let gameContext = document.getElementById("game").getContext("2d");
+        gameContext.beginPath();
+        gameContext.fillStyle = '#fa4b2a';
+        gameContext.fillRect(20, 20, 150, 100);
+        let carYPosition = 20;
+        let yDistance = 1;
+        let timeLoop=10;
+        let carXPosition=20,carWidth=150,carHeight=100,gameTopPosition=0,gameBottomPosition=600;
+        // function moveCarUp() {
+
+        //     gameContext.clearRect(20, carYPosition, 150, 100);
+
+        //     if (carYPosition > 0) {
+        //         carYPosition--;
+        //     }
+        //     drawCar();
+
+        // }
+        // if (carYPosition > 0) {
+        //     carYPosition--;
+        // }
+        // function moveCarDown() {
+
+        //     // Xoá hình chữ nhật đã vẽ trước đó
+        //     gameContext.clearRect(20, carYPosition, 150, 100);
+
+        //     if (carYPosition + 100 < 600) {
+        //         carYPosition++;
+        //     }
+        //     drawCar();
+
+        // }
+        function drawCar() {
+            gameContext.beginPath();
+            gameContext.fillStyle = '#fa4b2a';
+            gameContext.fillRect(20, carYPosition, 150, 100);
+        }
+        
+        function moveCar() {
+            //xóa HCN tại vị trí cũ
+            gameContext.clearRect(carXPosition, carYPosition, carWidth, carHeight);
+            // check xem đã chạm đến đường biên trên chưa
+            let isTouchTop = carYPosition < gameTopPosition;
+            // check xem đã chạm đến đường biên dưới chưa
+            let isTouchBottom = carYPosition + carHeight > gameBottomPosition;
+            //nếu chạm biên thì đảo ngược giá trị y
+            if (isTouchTop || isTouchBottom) {
+                yDistance = -yDistance;
+            }
+            //di chuyển theo y
+            carYPosition += yDistance;
+            //vẽ HCN tại vị trí mới
+            drawCar();
+        }
+        setInterval(moveCar, timeLoop);
+    </script>
+</body>
+
+</html>

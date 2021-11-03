@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <script>
+        let numberFirst = numberSecond = 1;
+        let fiboString = numberFirst + "," + numberSecond + "";
+        let count = 2;
+        let total=numberFirst+numberSecond;
+
+
+        while (count < 20) {
+
+            nextNumber = numberFirst + numberSecond;
+            numberFirst = numberSecond;
+            numberSecond = nextNumber;
+            total+=nextNumber;
+            count++;
+        }
+        document.write("tổng 20 số đầu tiên trong dãy fibonacci là:")
+        document.write(total);
+
+    </script>
+</body>
+</html>

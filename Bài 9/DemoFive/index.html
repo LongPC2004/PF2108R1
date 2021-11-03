@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoFive</title>
+</head>
+
+<body>
+
+    <script>
+        //các thứ trong tuần sẽ được biểu thị bởi các con số từ 0-6
+        let date=new Date();
+        let dayOfWeek=date.getDay();//lấy ngafy trong tuan hien tai
+        switch(dayOfWeek)
+        {
+            case 0: console.log('Sunday');break;
+            case 1: console.log('Monday');break;
+            case 2: console.log('Tuesday');break;
+            case 3: console.log('Wednesday');break;
+            case 4: console.log('Thursday');break;
+            case 5: console.log('Friday');break;
+            case 6: console.log('Saturday');break;
+            default:console.log('Invalid');break;//truong hop tra ve khong phai tu 0-6
+        }
+        switch(dayOfWeek)
+        {
+            
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5: console.log('Weekday');break;//ngày trong tuần
+            case 0:
+            case 6: console.log('Weekend');break;//cuối tuần
+            default:console.log('Invalid');break;//truong hop tra ve khong phai tu 0-6
+        }
+
+    </script>
+</body>
+
+</html>
