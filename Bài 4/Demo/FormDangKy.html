@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" type="text/css" href="styleform.css">
+</head>
+
+<body>
+    <form action="l" method="POST" style="width:50%;margin-left:25%;text-align: center;">
+        <fieldset>
+            <legend>Login form</legend>
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><b>Họ và tên</b></td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td><input type="email" name="email" placeholder="abc@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td><b>Số điện thoại</b></td>
+                    <td><input type="number" name="phone"></td>
+                </tr>
+                <tr>
+                    <td><b>Gender</b></td>
+                    <td><input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="dangki"><input type="submit" name="Đăng ký"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
